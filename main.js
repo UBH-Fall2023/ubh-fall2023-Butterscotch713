@@ -9,7 +9,7 @@ const createWindow = () => {
         }
     })
     
-    win.loadFile('static/index.html')
+    win.loadFile('static/start.html')
     
 }
 
