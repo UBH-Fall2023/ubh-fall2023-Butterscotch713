@@ -11,7 +11,7 @@ const createWindow = () => {
 
     win.maximize()
     
-    win.loadFile('static/index.html')
+    win.loadFile('static/start.html')
     
 }
 
