@@ -1,5 +1,4 @@
 const { app, BrowserWindow } = require('electron')
-const axios = require('axios');
 
 const createWindow = () => {
     const win = new BrowserWindow({
