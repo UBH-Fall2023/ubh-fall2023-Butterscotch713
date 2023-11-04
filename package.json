@@ -1,10 +1,16 @@
 {
-  "name": "tablesntops",
+  "name": "Tables & Tops",
   "version": "1.0.0",
   "description": "A virtual tabletop for dungeons and dragons.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "author": "Lizzy & Gianna"
+  "author": "Lizzy & Gianna",
+  "devDependencies": {
+    "electron": "^27.0.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
 }
