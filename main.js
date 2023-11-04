@@ -8,6 +8,8 @@ const createWindow = () => {
             nodeIntegration: true
         }
     })
+
+    win.maximize()
     
     win.loadFile('static/index.html')
     

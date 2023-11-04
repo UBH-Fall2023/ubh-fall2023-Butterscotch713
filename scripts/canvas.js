@@ -1,30 +1,18 @@
-export default {
-    props: [ 'width', 'height' ],
-    methods: {
-       drawGrid () {}
-    },
-    mounted () {
-       this.drawGrid()
-    }
-}
-
 function drawGrid () {
-    let ctx = document.getElementById('grid') 
-    let s = 28
-    let pL = s
-    let pT = s
-    let pR = s
-    let pB = s
+    const canvas = document.getElementById('grid')
+    const ctx = canvas.getContext("2d");
+    let gridSize = 100
     
-    ctx.strokeStyle = 'lightgrey'
     ctx.beginPath()
-    for (var x = pL; x <= this.width - pR; x += s) {
-       ctx.moveTo(x, pT)
-       ctx.lineTo(x, this.height - pB)
+    console.log("Width=" + canvas.width + ", Height=" + canvas.height)
+    for (var x = gridSize; x <= canvas.width - gridSize; x += gridSize) {
+        ctx.moveTo(x, gridSize)
+        ctx.lineTo(x, canvas.height - gridSize)
+        console.log("Creating line from " + x + " to " + (canvas.height - gridSize))
     }
-    for (var y = pT; y <= this.height - pB; y += s) {
-       ctx.moveTo(pL, y)
-       ctx.lineTo(this.width - pR, y)
+    for (var y = gridSize; y <= canvas.height - gridSize; y += gridSize) {
+        ctx.moveTo(gridSize, y)
+        ctx.lineTo(canvas.width - gridSize, y)
     }
     ctx.stroke()
 }
